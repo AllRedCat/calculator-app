@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <title>Calculator App | Red Cat</title>
     </head>
     <body>
@@ -19,8 +21,7 @@
                             onclick="appendToResult('8')"></td>
                     <td><input type="button" value="9"
                             onclick="appendToResult('9')"></td>
-                    <td><input type="button" value="/"
-                            onclick="appendToResult('/')"></td>
+                    <td><input type="button" value="DEL" onclick="clearResult()"></td>
                 </tr>
                 <tr>
                     <td><input type="button" value="4"
@@ -29,8 +30,8 @@
                             onclick="appendToResult('5')"></td>
                     <td><input type="button" value="6"
                             onclick="appendToResult('6')"></td>
-                    <td><input type="button" value="-"
-                            onclick="appendToResult('-')"></td>
+                    <td><input type="button" value="+"
+                            onclick="appendToResult('+')"></td>
                 </tr>
                 <tr>
                     <td><input type="button" value="1"
@@ -39,17 +40,23 @@
                             onclick="appendToResult('2')"></td>
                     <td><input type="button" value="3"
                             onclick="appendToResult('3')"></td>
-                    <td><input type="button" value="+"
-                            onclick="appendToResult('+')"></td>
+                    <td><input type="button" value="-"
+                            onclick="appendToResult('-')"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="0"
-                            onclick="appendToResult('0')"></td>
                     <td><input type="button" value="."
                             onclick="appendToResult('.')"></td>
-                    <td><input type="button" value="="
+                    <td><input type="button" value="0"
+                            onclick="appendToResult('0')"></td>
+                    <td><input type="button" value="/"
+                            onclick="appendToResult('/')"></td>
+                    <td><input type="button" value="*"
+                            onclick="appendToResult('*')"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="reset" onclick="clearResult()"></td>
+                    <td colspan="2"><input type="button" value="="
                             onclick="calculateResult()"></td>
-                    <td><input type="button" value="C" onclick="clearResult()"></td>
                 </tr>
             </table>
         </main>
