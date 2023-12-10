@@ -10,62 +10,98 @@
     </head>
     <body>
         <main>
-            <nav>
-                <input type="checkbox" id="theme-toggle">
-                <label for="theme-toggle" class="theme-option light-option"
-                    data-theme="light">1</label>
-                <label for="theme-toggle" class="theme-option dark-option"
-                    data-theme="dark">2</label>
-                <label for="theme-toggle" class="theme-option custom-option"
-                    data-theme="custom">3</label>
-            </nav>
-            <table>
+            <header>
+                <div class="name">calc</div>
+                <nav>
+                    <p>theme</p>
+                    <table>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="checkbox" id="theme-toggle">
+                                <label for="theme-toggle"
+                                class="theme-option first-option"
+                                data-theme="light"></label>
+                                <label for="theme-toggle"
+                                class="theme-option second-option"
+                                data-theme="dark"></label>
+                                <label for="theme-toggle"
+                                class="theme-option third-option"
+                                data-theme="custom"></label>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- <div class="switch">
+                        <div class="switch-numbers">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                        </div>
+                        <input type="checkbox" id="theme-toggle">
+                        <label for="theme-toggle"
+                            class="theme-option light-option"
+                            data-theme="light">1</label>
+                        <label for="theme-toggle"
+                            class="theme-option dark-option"
+                            data-theme="dark">2</label>
+                        <label for="theme-toggle"
+                            class="theme-option custom-option"
+                            data-theme="custom">3</label>
+                    </div>
+                </nav> -->
+            </header>
+            <input type="text" id="result" disabled>
+            <table class="calc-table">
                 <tr>
-                    <td colspan="4"><input type="text" id="result" disabled></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="7"
+                    <td><input type="button" value="7" class="calc-buttons"
                             onclick="appendToResult('7')"></td>
-                    <td><input type="button" value="8"
+                    <td><input type="button" value="8" class="calc-buttons"
                             onclick="appendToResult('8')"></td>
-                    <td><input type="button" value="9"
+                    <td><input type="button" value="9" class="calc-buttons"
                             onclick="appendToResult('9')"></td>
-                    <td><input type="button" value="DEL" onclick="clearResult()"></td>
+                    <td><input type="button" value="DEL" class="calc-buttons"
+                            onclick="clearResult()"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="4"
+                    <td><input type="button" value="4" class="calc-buttons"
                             onclick="appendToResult('4')"></td>
-                    <td><input type="button" value="5"
+                    <td><input type="button" value="5" class="calc-buttons"
                             onclick="appendToResult('5')"></td>
-                    <td><input type="button" value="6"
+                    <td><input type="button" value="6" class="calc-buttons"
                             onclick="appendToResult('6')"></td>
-                    <td><input type="button" value="+"
+                    <td><input type="button" value="+" class="calc-buttons"
                             onclick="appendToResult('+')"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1"
+                    <td><input type="button" value="1" class="calc-buttons"
                             onclick="appendToResult('1')"></td>
-                    <td><input type="button" value="2"
+                    <td><input type="button" value="2" class="calc-buttons"
                             onclick="appendToResult('2')"></td>
-                    <td><input type="button" value="3"
+                    <td><input type="button" value="3" class="calc-buttons"
                             onclick="appendToResult('3')"></td>
-                    <td><input type="button" value="-"
+                    <td><input type="button" value="-" class="calc-buttons"
                             onclick="appendToResult('-')"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="."
+                    <td><input type="button" value="." class="calc-buttons"
                             onclick="appendToResult('.')"></td>
-                    <td><input type="button" value="0"
+                    <td><input type="button" value="0" class="calc-buttons"
                             onclick="appendToResult('0')"></td>
-                    <td><input type="button" value="/"
+                    <td><input type="button" value="/" class="calc-buttons"
                             onclick="appendToResult('/')"></td>
-                    <td><input type="button" value="*"
+                    <td><input type="button" value="*" class="calc-buttons"
                             onclick="appendToResult('*')"></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="button" value="reset"
+                            class="calc-buttons"
                             onclick="clearResult()"></td>
                     <td colspan="2"><input type="button" value="="
+                            class="calc-buttons"
                             onclick="calculateResult()"></td>
                 </tr>
             </table>

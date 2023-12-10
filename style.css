@@ -1,33 +1,37 @@
+/*set html variables*/
+
 html {
-    --background-color: #fff;
-    --light-option: #BA324F;
-    --dark-option: transparent;
-    --custom-option: transparent;
+    --background-color: hsl(222, 26%, 31%);
+    --first-option: #BA324F;
+    --second-option: transparent;
+    --third-option: transparent;
 }
 
 html[data-theme="light"] {
-    --background-color: #fff;
-    --light-option: #BA324F;
-    --dark-option: transparent;
-    --custom-option: transparent;
+    --background-color: hsl(222, 26%, 31%);
+    --first-option: #BA324F;
+    --second-option: transparent;
+    --third-option: transparent;
     --font-color: #333;
 }
 
 html[data-theme="dark"] {
     --background-color: #333;
-    --light-option: transparent;
-    --dark-option: #BA324F;
-    --custom-option: transparent;
+    --first-option: transparent;
+    --second-option: #BA324F;
+    --third-option: transparent;
     --font-color: #fff;
 }
 
 html[data-theme="custom"] {
     --background-color: #4BA3C3;
-    --light-option: transparent;
-    --dark-option: transparent;
-    --custom-option: #BA324F;
+    --first-option: transparent;
+    --second-option: transparent;
+    --third-option: #BA324F;
     --font-color: #333;
 }
+
+/*body properties*/
 
 body {
     font-family: Arial, sans-serif;
@@ -41,6 +45,8 @@ body {
     align-items: center;
 }
 
+/*switch theme buttons properties*/
+
 .theme-option {
     cursor: pointer;
     padding: 5px 10px;
@@ -49,20 +55,20 @@ body {
     border-radius: 5px;
 }
 
-.light-option {
-    background-color: var(--light-option);
+.first-option {
+    background-color: var(--first-option);
     color: var(--font-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
-.dark-option {
-    background-color: var(--dark-option);
+.second-option {
+    background-color: var(--second-option);
     color: var(--font-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
-.custom-option {
-    background-color: var(--custom-option);
+.third-option {
+    background-color: var(--third-option);
     color: var(--font-color);
     transition: background-color 0.3s, color 0.3s;
 }
@@ -71,10 +77,28 @@ body {
     display: none;
 }
 
-td{
+/*navigations properties*/
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.switch-numbers {
+    display: flex;
+}
+
+/*table properties*/
+
+td {
     width: 50px;
 }
 
-input{
+.calc-buttons {
     width: 100%;
 }
