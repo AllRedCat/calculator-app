@@ -25,13 +25,13 @@
                                 <input type="checkbox" id="theme-toggle">
                                 <label for="theme-toggle"
                                 class="theme-option first-option"
-                                data-theme="light"></label>
+                                data-theme="first"></label>
                                 <label for="theme-toggle"
                                 class="theme-option second-option"
-                                data-theme="dark"></label>
+                                data-theme="second"></label>
                                 <label for="theme-toggle"
                                 class="theme-option third-option"
-                                data-theme="custom"></label>
+                                data-theme="third"></label>
                             </td>
                         </tr>
                     </table>
@@ -57,50 +57,50 @@
             <input type="text" id="result" disabled>
             <table class="calc-table">
                 <tr>
-                    <td><input type="button" value="7" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="7" class="calc-buttons"
                             onclick="appendToResult('7')"></td>
-                    <td><input type="button" value="8" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="8" class="calc-buttons"
                             onclick="appendToResult('8')"></td>
-                    <td><input type="button" value="9" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="9" class="calc-buttons"
                             onclick="appendToResult('9')"></td>
-                    <td><input type="button" value="DEL" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="DEL" class="calc-buttons"
                             onclick="clearResult()"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="4" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="4" class="calc-buttons"
                             onclick="appendToResult('4')"></td>
-                    <td><input type="button" value="5" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="5" class="calc-buttons"
                             onclick="appendToResult('5')"></td>
-                    <td><input type="button" value="6" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="6" class="calc-buttons"
                             onclick="appendToResult('6')"></td>
-                    <td><input type="button" value="+" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="+" class="calc-buttons"
                             onclick="appendToResult('+')"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="1" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="1" class="calc-buttons"
                             onclick="appendToResult('1')"></td>
-                    <td><input type="button" value="2" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="2" class="calc-buttons"
                             onclick="appendToResult('2')"></td>
-                    <td><input type="button" value="3" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="3" class="calc-buttons"
                             onclick="appendToResult('3')"></td>
-                    <td><input type="button" value="-" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="-" class="calc-buttons"
                             onclick="appendToResult('-')"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="." class="calc-buttons"
+                    <td class="key-space"><input type="button" value="." class="calc-buttons"
                             onclick="appendToResult('.')"></td>
-                    <td><input type="button" value="0" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="0" class="calc-buttons"
                             onclick="appendToResult('0')"></td>
-                    <td><input type="button" value="/" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="/" class="calc-buttons"
                             onclick="appendToResult('/')"></td>
-                    <td><input type="button" value="*" class="calc-buttons"
+                    <td class="key-space"><input type="button" value="*" class="calc-buttons"
                             onclick="appendToResult('*')"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="button" value="reset"
+                    <td colspan="2" class="key-space"><input type="button" value="reset"
                             class="calc-buttons"
                             onclick="clearResult()"></td>
-                    <td colspan="2"><input type="button" value="="
+                    <td colspan="2" class="key-space"><input type="button" value="="
                             class="calc-buttons"
                             onclick="calculateResult()"></td>
                 </tr>

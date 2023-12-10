@@ -1,42 +1,50 @@
 /*imports*/
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-/*font*/
-* {
-    font-family: 'League Spartan', sans-serif;
-}
-
 /*set html variables*/
 
 html {
     --background-color: hsl(222, 26%, 31%);
+    --key-pad: hsl(224, 36%, 15%);
+    --screen: hsl(224, 36%, 15%);
     --first-option: #BA324F;
     --second-option: transparent;
     --third-option: transparent;
 }
 
-html[data-theme="light"] {
+html[data-theme="first"] {
     --background-color: hsl(222, 26%, 31%);
+    --key-pad: hsl(224, 36%, 15%);
+    --screen: hsl(224, 36%, 15%);
     --first-option: #BA324F;
     --second-option: transparent;
     --third-option: transparent;
     --font-color: #333;
 }
 
-html[data-theme="dark"] {
-    --background-color: #333;
+html[data-theme="second"] {
+    --background-color: hsl(0, 0%, 90%);
+    --key-pad: hsl(0, 5%, 81%);
+    --screen: hsl(0, 0%, 93%);
     --first-option: transparent;
     --second-option: #BA324F;
     --third-option: transparent;
     --font-color: #fff;
 }
 
-html[data-theme="custom"] {
-    --background-color: #4BA3C3;
+html[data-theme="third"] {
+    --background-color: hsl(268, 75%, 9%);
+    --key-pad: hsl(268, 71%, 12%);
+    --screen: hsl(268, 71%, 12%);
     --first-option: transparent;
     --second-option: transparent;
     --third-option: #BA324F;
     --font-color: #333;
+}
+
+/*font*/
+* {
+    font-family: 'League Spartan', sans-serif;
 }
 
 /*body properties*/
@@ -85,11 +93,19 @@ body {
     display: none;
 }
 
+/*main properties*/
+main {
+    /* width: 450px; */
+    background-color: palevioletred;
+}
+
 /*navigations properties*/
 
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /* margin: 0 0 10px 0; */
 }
 
 nav {
@@ -101,12 +117,35 @@ nav {
     display: flex;
 }
 
-/*table properties*/
+/*result bar*/
+#result {
+    width: 374px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 36px;
+    text-align: end;
+    background-color: var(--screen);
+}
 
-td {
-    width: 50px;
+/*table properties*/
+.calc-table {
+    border-collapse: separate;
+    border-spacing: 14px;
+    background-color: var(--key-pad);
+}
+
+.key-space {
+    width: 80px;
+    height: 40px;
 }
 
 .calc-buttons {
     width: 100%;
+    height: 100%;
+    border-style: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 0 black;
+    font-size: 26px;
+    text-align: center;
+    text-justify: center;
 }
