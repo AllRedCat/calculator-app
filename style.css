@@ -241,4 +241,12 @@ nav p {
         width: 58px;
         height: 58px;
     }
+
+    .calc-buttons:hover {
+        filter: brightness(1);
+    }
+
+    .calc-buttons:active {
+        filter: brightness(1.4);
+    }
 }
