@@ -232,13 +232,13 @@ nav p {
     color: var(--equal-font-color);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
     #result {
-        width: 312px;
+        width: 304px;
     }
 
     .key-space {
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
     }
 }

@@ -26,3 +26,8 @@ function calculateResult() {
 function clearResult() {
     document.getElementById('result').value = '';
 }
+
+function deleteLastCharacter() {
+    var currentResult = document.getElementById('result').value;
+    document.getElementById('result').value = currentResult.slice(0, -1);
+}
