@@ -1,3 +1,4 @@
+// switch theme
 document.addEventListener('DOMContentLoaded', function () {
     const themeOptions = document.querySelectorAll('.theme-option');
 
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
+// calculadora
 function appendToResult(value) {
     document.getElementById('result').value += value;
 }

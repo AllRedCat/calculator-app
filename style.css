@@ -5,27 +5,48 @@
 
 html {
     --background-color: hsl(222, 26%, 31%);
-    --key-pad: hsl(224, 36%, 15%);
+    --key-pad: hsl(223, 31%, 20%);
     --screen: hsl(224, 36%, 15%);
-    --first-option: #BA324F;
+    --reset-key-color: hsl(225, 21%, 49%);
+    --reset-key-shadow: hsl(224, 28%, 35%);
+    --key-color: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --equal-key-color: hsl(6, 63%, 50%);
+    --equal-key-shadow: hsl(6, 70%, 34%);
+    --first-option: hsl(6, 63%, 50%);
     --second-option: transparent;
     --third-option: transparent;
+    --font-color: hsl(0, 0%, 100%);
+    --key-font-color: hsl(221, 14%, 31%);
 }
 
 html[data-theme="first"] {
     --background-color: hsl(222, 26%, 31%);
-    --key-pad: hsl(224, 36%, 15%);
+    --key-pad: hsl(223, 31%, 20%);
     --screen: hsl(224, 36%, 15%);
-    --first-option: #BA324F;
+    --reset-key-color: hsl(225, 21%, 49%);
+    --reset-key-shadow: hsl(224, 28%, 35%);
+    --key-color: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --equal-key-color: hsl(6, 63%, 50%);
+    --equal-key-shadow: hsl(6, 70%, 34%);
+    --first-option: hsl(6, 63%, 50%);
     --second-option: transparent;
     --third-option: transparent;
-    --font-color: #333;
+    --font-color: hsl(0, 0%, 100%);
+    --key-font-color: hsl(221, 14%, 31%);
 }
 
 html[data-theme="second"] {
     --background-color: hsl(0, 0%, 90%);
     --key-pad: hsl(0, 5%, 81%);
     --screen: hsl(0, 0%, 93%);
+    --reset-key-color: hsl(225, 21%, 49%);
+    --reset-key-shadow: hsl(224, 28%, 35%);
+    --key-color: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --equal-key-color: hsl(6, 63%, 50%);
+    --equal-key-shadow: hsl(6, 70%, 34%);
     --first-option: transparent;
     --second-option: #BA324F;
     --third-option: transparent;
@@ -61,14 +82,26 @@ body {
     align-items: center;
 }
 
-/*switch theme buttons properties*/
+/*switch theme properties*/
+.switch-table {}
+
+.switch {
+    background-color: var(--key-pad);
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.theme-number-space {
+    width: 100%;
+    text-align: center;
+    text-justify: center;
+}
 
 .theme-option {
     cursor: pointer;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0px 5px;
+    border: none;
+    border-radius: 50%;
 }
 
 .first-option {
@@ -81,22 +114,18 @@ body {
     background-color: var(--second-option);
     color: var(--font-color);
     transition: background-color 0.3s, color 0.3s;
+    margin-left: 8px;
 }
 
 .third-option {
     background-color: var(--third-option);
     color: var(--font-color);
     transition: background-color 0.3s, color 0.3s;
+    margin-left: 8px;
 }
 
 #theme-toggle {
     display: none;
-}
-
-/*main properties*/
-main {
-    /* width: 450px; */
-    background-color: palevioletred;
 }
 
 /*navigations properties*/
@@ -105,12 +134,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin: 0 0 10px 0; */
+}
+
+header {
+    color: var(--font-color);
+    font-size: 24px;
 }
 
 nav {
     display: flex;
     align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+nav p {
+    margin: 18px 0 0 0;
+    color: var(--font-color);
 }
 
 .switch-numbers {
@@ -119,34 +159,55 @@ nav {
 
 /*result bar*/
 #result {
-    width: 378px;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 36px;
+    /* width: 95%; */
+    width: 394px;
+    margin: 4px 0 20px 0;
+    padding: 26px 16px 20px 16px;
+    font-size: 40px;
+    color: var(--font-color);
     text-align: end;
     border-style: none;
+    border-radius: 10px;
     background-color: var(--screen);
 }
 
 /*table properties*/
 .calc-table {
     border-collapse: separate;
-    border-spacing: 14px;
+    border-spacing: 16px;
+    padding: 8px;
+    border-radius: 10px;
     background-color: var(--key-pad);
 }
 
 .key-space {
     width: 80px;
-    height: 40px;
+    height: 50px;
 }
 
 .calc-buttons {
+    cursor: pointer;
     width: 100%;
     height: 100%;
     border-style: none;
     border-radius: 8px;
-    box-shadow: 0 4px 0 0 black;
-    font-size: 26px;
+    font-size: 28px;
     text-align: center;
     text-justify: center;
+    color: var(--key-font-color);
+    background-color: var(--key-color);
+    box-shadow: 0 4px 0 0 var(--key-shadow);
+}
+
+.reset-key {
+    background-color: var(--reset-key-color);
+    box-shadow: 0 4px 0 0 var(--reset-key-shadow);
+    color: var(--font-color);
+    font-size: 20px;
+}
+
+.equal-key {
+    background-color: var(--equal-key-color);
+    box-shadow: 0 4px 0 0 var(--equal-key-shadow);
+    color: var(--font-color);
 }
