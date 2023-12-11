@@ -18,6 +18,7 @@ html {
     --third-option: transparent;
     --font-color: hsl(0, 0%, 100%);
     --key-font-color: hsl(221, 14%, 31%);
+    --reset-equal-font: hsl(0, 0%, 100%);
 }
 
 html[data-theme="first"] {
@@ -35,22 +36,24 @@ html[data-theme="first"] {
     --third-option: transparent;
     --font-color: hsl(0, 0%, 100%);
     --key-font-color: hsl(221, 14%, 31%);
+    --reset-equal-font: hsl(0, 0%, 100%);
 }
 
 html[data-theme="second"] {
     --background-color: hsl(0, 0%, 90%);
     --key-pad: hsl(0, 5%, 81%);
     --screen: hsl(0, 0%, 93%);
-    --reset-key-color: hsl(225, 21%, 49%);
-    --reset-key-shadow: hsl(224, 28%, 35%);
-    --key-color: hsl(30, 25%, 89%);
-    --key-shadow: hsl(28, 16%, 65%);
-    --equal-key-color: hsl(6, 63%, 50%);
-    --equal-key-shadow: hsl(6, 70%, 34%);
+    --reset-key-color: hsl(185, 42%, 37%);
+    --reset-key-shadow: hsl(185, 58%, 25%);
+    --key-color: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --equal-key-color: hsl(25, 98%, 40%);
+    --equal-key-shadow: hsl(25, 99%, 27%);  
     --first-option: transparent;
-    --second-option: #BA324F;
+    --second-option: hsl(25, 98%, 40%);
     --third-option: transparent;
-    --font-color: #fff;
+    --font-color: hsl(60, 10%, 19%);
+    --reset-equal-font: hsl(0, 0%, 100%);
 }
 
 html[data-theme="third"] {
@@ -61,6 +64,7 @@ html[data-theme="third"] {
     --second-option: transparent;
     --third-option: #BA324F;
     --font-color: #333;
+    --reset-equal-font: hsl(0, 0%, 100%);
 }
 
 /*font*/
@@ -202,12 +206,12 @@ nav p {
 .reset-key {
     background-color: var(--reset-key-color);
     box-shadow: 0 4px 0 0 var(--reset-key-shadow);
-    color: var(--font-color);
+    color: var(--reset-equal-font);
     font-size: 20px;
 }
 
 .equal-key {
     background-color: var(--equal-key-color);
     box-shadow: 0 4px 0 0 var(--equal-key-shadow);
-    color: var(--font-color);
+    color: var(--reset-equal-font);
 }
