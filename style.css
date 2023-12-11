@@ -18,7 +18,8 @@ html {
     --third-option: transparent;
     --font-color: hsl(0, 0%, 100%);
     --key-font-color: hsl(221, 14%, 31%);
-    --reset-equal-font: hsl(0, 0%, 100%);
+    --reset-font-color: hsl(0, 0%, 100%);
+    --equal-font-color: hsl(0, 0%, 100%);
 }
 
 html[data-theme="first"] {
@@ -36,7 +37,8 @@ html[data-theme="first"] {
     --third-option: transparent;
     --font-color: hsl(0, 0%, 100%);
     --key-font-color: hsl(221, 14%, 31%);
-    --reset-equal-font: hsl(0, 0%, 100%);
+    --reset-font-color: hsl(0, 0%, 100%);
+    --equal-font-color: hsl(0, 0%, 100%);
 }
 
 html[data-theme="second"] {
@@ -48,23 +50,33 @@ html[data-theme="second"] {
     --key-color: hsl(45, 7%, 89%);
     --key-shadow: hsl(35, 11%, 61%);
     --equal-key-color: hsl(25, 98%, 40%);
-    --equal-key-shadow: hsl(25, 99%, 27%);  
+    --equal-key-shadow: hsl(25, 99%, 27%);
     --first-option: transparent;
     --second-option: hsl(25, 98%, 40%);
     --third-option: transparent;
     --font-color: hsl(60, 10%, 19%);
-    --reset-equal-font: hsl(0, 0%, 100%);
+    --key-font-color: hsl(60, 10%, 19%);
+    --reset-font-color: hsl(0, 0%, 100%);
+    --equal-font-color: hsl(0, 0%, 100%);
 }
 
 html[data-theme="third"] {
     --background-color: hsl(268, 75%, 9%);
     --key-pad: hsl(268, 71%, 12%);
     --screen: hsl(268, 71%, 12%);
+    --reset-key-color: hsl(281, 89%, 26%);
+    --reset-key-shadow: hsl(285, 91%, 52%);
+    --key-color: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --equal-key-color: hsl(176, 100%, 44%);
+    --equal-key-shadow: hsl(177, 92%, 70%);
     --first-option: transparent;
     --second-option: transparent;
-    --third-option: #BA324F;
-    --font-color: #333;
-    --reset-equal-font: hsl(0, 0%, 100%);
+    --third-option: hsl(176, 100%, 44%);
+    --font-color: hsl(52, 100%, 62%);
+    --key-font-color: hsl(52, 100%, 62%);
+    --reset-font-color: hsl(0, 0%, 100%);
+    --equal-font-color: hsl(198, 20%, 13%);
 }
 
 /*font*/
@@ -203,15 +215,19 @@ nav p {
     box-shadow: 0 4px 0 0 var(--key-shadow);
 }
 
+.calc-buttons:hover {
+    filter: brightness(1.4);
+}
+
 .reset-key {
     background-color: var(--reset-key-color);
     box-shadow: 0 4px 0 0 var(--reset-key-shadow);
-    color: var(--reset-equal-font);
+    color: var(--reset-font-color);
     font-size: 20px;
 }
 
 .equal-key {
     background-color: var(--equal-key-color);
     box-shadow: 0 4px 0 0 var(--equal-key-shadow);
-    color: var(--reset-equal-font);
+    color: var(--equal-font-color);
 }
