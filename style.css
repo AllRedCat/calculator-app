@@ -231,3 +231,14 @@ nav p {
     box-shadow: 0 4px 0 0 var(--equal-key-shadow);
     color: var(--equal-font-color);
 }
+
+@media (max-width: 430px) {
+    #result {
+        width: 312px;
+    }
+
+    .key-space {
+        width: 60px;
+        height: 60px;
+    }
+}
